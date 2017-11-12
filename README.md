@@ -9,3 +9,9 @@ The code is creditted to Reid Johnson from github[https://github.com/dialnd/imba
 This file functions to trans the categorial data to numerical using binary encoding.
 ### knn_impute.py
 This file implements the imputation for missing values using knn.
+
+### CS5228_Rcode.R
+This file implements random forest using MICE.
+
+### worker.py 
+input feature Mutual information caculation; Logistic Regression model
