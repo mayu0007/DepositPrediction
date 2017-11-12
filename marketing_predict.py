@@ -56,19 +56,6 @@ def basic_process(data_filename):
     data = numpy.array(data)
     return data
 
-def cate_encode(X, encode_type="label"):
-    if encode_type == "label":
-        encoder = preprocessing.LabelEncoder()
-        for j in (1, 2, 3, 4, 5, 6, 7, 8, 9, 14, 20):
-            X[:, j] = encoder.fit_transform(X[:, j])
-        out = X
-    else:
-        encoder = ce.BinaryEncoder()
-        encoder.fit(X, None)
-        out = encoder.transform(X)
-        print(out.info())
-    return out
-
 def generate_data(sampli=False, scale=False, drop_cols=None, dt_file=origin_data):
     print("using original data...")
     train_data = basic_process(dt_file["train"])
